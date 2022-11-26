@@ -1,0 +1,140 @@
+/* ///// Voxel Timeline */
+:root {
+    --gray-4: rgb(209, 209, 214);
+    --gray-5: rgb(229, 229, 234);
+    --gray-6: rgb(242, 242, 247);
+    --gray-7: rgb(142, 142, 147);
+    --gray-8: rgb(99, 99, 102);
+    --gray-9: rgb(44, 44, 46);
+    --gray-10: rgb(58, 58, 60);
+}
+
+/* ///// Timeline Global ///// */
+/* ***** Comment & Like counter */
+.ts-item-count {
+    background-color: var(--gray-10);
+    padding: 0.3em 0.6em;
+    margin: -2em 0 0 -1.8em;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+div.ts-single-status {
+    grid-gap: 10px !important;
+}
+
+div.ts-single-status > a {
+    background-color: var(--gray-9);
+    padding: 20px 15px !important;
+    border-radius: 10px 0 0 10px;
+}
+
+/* ***** User Avatar */
+div.ts-single-status > a > img {
+    width: 40px !important;;
+    height: 40px !important;;
+    min-width: 40px !important;;
+}
+
+/* ***** Comment Area */
+div.ts-single-status > div {
+    padding: 20px 20px 8px 10px !important;
+}
+
+.ts-status-footer {
+    border-top: 2px dotted var(--gray-4);
+    padding: 12px 5px 0 5px;
+}
+
+/* ***** Comment images */
+div.ts-single-status img:hover {
+    transform: scale(1.5);
+    transition-property: all;
+    transition-duration: 1.4s;
+    transition-timing-function: ease;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1.4s;
+    -webkit-transition-timing-function: ease;
+}
+
+/* ///// Reply Comment */
+li.ts-single-status {
+    grid-gap: 5px !important;
+}
+
+.ts-reply .ts-user-avatar {
+    background-color: var(--gray-8);
+    padding: 16px 8px;
+    border-radius: 10px 0 0 10px;
+}
+
+.ts-reply.ts-single-status {
+    background-color: var(--gray-6) !important;
+}
+
+.ts-reply .comment-body {
+    padding: 15px 15px 8px 10px !important;
+}
+
+
+/* ////////// START RESPONSIVE ////////// */
+@media (max-width: 992px) {
+    div.ts-single-status > a {
+        padding: 22px 16px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    div.ts-single-status > a {
+        padding: 22px 8px !important;
+        background-color: yellow !important;
+    }
+    
+    div.ts-single-status > a > img {
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    div.ts-single-status, ul.status-comments-list > li {
+        grid-gap: 2px !important;
+    }
+    
+    /* ***** Mian Comment Box */
+    div.ts-single-status > div {
+        grid-gap: 20px !important;
+        padding: 20px 10px 10px 10px !important;
+    }
+    
+    /*  ***** User avatar background  */
+    div.ts-single-status > a {
+        background-color: green !important;
+        padding: 20px 6px !important;
+    }
+    
+    /*  ***** User avatar  */
+    div.ts-single-status > a > img {
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+    }
+    
+    /*  ///// Reply Area //////  */
+    ul.status-comments-list {
+        margin: 2px 2px 5px -5px !important;
+    }
+    
+    /*  Reply Comment Box  */
+    .comment-body.ts-status {
+        padding: 10px 5px 8px 10px !important;
+    }
+    
+    ul.status-comments-list:nth-child(1) > li:nth-child(1) > a:nth-child(1),
+    ul.status-comments-list:nth-child(4) > li:nth-child(1) > a:nth-child(1)
+    {
+        padding: 15px 5px !important;
+    }
+}
+/* ////////// END RESPONSIVE ////////// */
