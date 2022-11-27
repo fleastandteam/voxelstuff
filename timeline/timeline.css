@@ -31,9 +31,9 @@ div.ts-single-status > a {
 
 /* ***** User Avatar */
 div.ts-single-status > a > img {
-    width: 40px !important;;
-    height: 40px !important;;
-    min-width: 40px !important;;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
 }
 
 /* ***** Comment Area */
